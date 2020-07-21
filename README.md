@@ -1,4 +1,4 @@
-[![Build status](https://travis-ci.org/IliaZenkov/TravisCI_pytest_tox_project.svg?branch=master)](https://travis-ci.org/iliazenkov)
+[![Build status](https://travis-ci.org/IliaZenkov/TravisCI_pytest_tox_project.svg?branch=master)]([![Build status](https://travis-ci.org/IliaZenkov/TravisCI_pytest_tox_project.svg?branch=master)](https://travis-ci.org/github/IliaZenkov/TravisCI_pytest_tox_project)
 
 # Travis+pytest find_substrings
  A project I made to get familiar with Travis CI running pytest in order to better understand production-ready Python package deployment.
