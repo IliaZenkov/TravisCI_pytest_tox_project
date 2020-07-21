@@ -8,4 +8,4 @@ install:
   - python setup.py install
   
 script:
-  - py.test -v -rs substring_test.py
+  - py.test -v -rs test_substrings.py
