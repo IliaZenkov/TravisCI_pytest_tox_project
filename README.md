@@ -1,4 +1,4 @@
-[![Build status](https://travis-ci.org/iliazenkov/travis-pytest-hello-world.svg?master)](https://travis-ci.org/iliazenkov)
+[![Build status](https://travis-ci.org/IliaZenkov/TravisCI_pytest_tox_project.svg?branch=master)](https://travis-ci.org/iliazenkov)
 
 # Travis+pytest find_substrings
  A project I made to get familiar with Travis CI running pytest in order to better understand production-ready Python package deployment.
@@ -10,4 +10,3 @@
 Alternatively, a ```requirements.txt``` file is included so users can manually install dependencies using ```pip install -r requirements.txt``` 
 
 For a one-click solution not relying on the package's ```setup.py```, users can try run a shell script command such as  ```virtualenv .env && source .env/bin/activate && pip install -r requirements.txt```
-test
