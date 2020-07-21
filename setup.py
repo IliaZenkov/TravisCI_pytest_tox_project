@@ -2,7 +2,6 @@
 
 from glob import glob
 from setuptools import find_packages, setup
-from distutils.core import setup
 
 setup(name='find_substrings',
       version='1.0',
