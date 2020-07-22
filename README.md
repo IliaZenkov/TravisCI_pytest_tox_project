@@ -8,5 +8,3 @@
  As an example, I would upload the find_substrings package to PyPI and then be able to install it by running ```pip install find_substrings``` which should install all python modules in ```./src``` and their dependencies as configured in ```setup.py```
 
 Alternatively, a ```requirements.txt``` file is included so users can manually install dependencies using ```pip install -r requirements.txt``` - For a one-click solution not relying on the package's ```setup.py```, users can run a shell script command such as  ```virtualenv .env && source .env/bin/activate && pip install -r requirements.txt```
-
-edit to my readme
