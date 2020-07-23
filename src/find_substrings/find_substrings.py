@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-class substring():
+class substring:
     def __init__(self, string):
         self.string = string
         self.list = []
@@ -16,21 +16,20 @@ class substring():
         :return: list of substrings as list, count of substrings as int
         """
         # Get all substrings of string and store them in an empty list
-
         for i in range(len(self.string)):
             for j in range(i + 1, (len(self.string) + 1)):
                 self.list.append(self.string[i:j])
                 self.count = self.count + 1
 
         # printing result
-        print(f'Substrings of "{self.string}": {self.list}')
-        print(f'There are {self.count} substrings in {self.string}')
-
-        return self.list, self.count
+        print_substring(self)
 
 
-# driver code
-#string = input("enter string: ")
-#substring_object = substring(string)
-#print(substring_object.list)
-#print(substring_object.count)
+class print_substring:
+    def __init__(self, substrings):
+        # print(substrings)
+        if substrings.count > 10:
+            print(f"There are {substrings.count} substrings in '{substrings.string}'")
+            print(f"Substrings of '{substrings.string}': {substrings.list}")
+        else:
+            print(f"There are 10 or less substrings in '{substrings.string}', we don't need to know what they are.")
