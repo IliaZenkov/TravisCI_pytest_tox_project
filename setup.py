@@ -11,4 +11,5 @@ setup(name='find_substrings',
       package_dir={'': 'src'},
       py_modules=[splitext(basename(path))[0] for path in glob('src/*.py')],
      )
-#install_requires=['']
+
+install_requires=['pytest==5.4.3','pytest-cov==2.6.1','coveralls==2.1.1']
