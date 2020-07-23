@@ -8,7 +8,7 @@
 
 
 # How to Write a Python Package
-This here is an example project I constructed from scratch (vs. using a [cookiecutter](https://github.com/cookiecutter/cookiecutter) template to get familiar with **Travis CI** running **pytest and pytest-cov**, with **tox as a Travis frontend**, **PyUp to automatically manage dependencies and their security**, and **Coveralls to track code coverage**. Of course, if the package doesn't adhere to PEP8 then **black** will prevent the Travis build from passing.<br/>Now let's get writing a hit Python package ;)
+This here is an example project I constructed from scratch (as opposed to using a [cookiecutter](https://github.com/cookiecutter/cookiecutter) template) to get familiar with **Travis CI** running **pytest and pytest-cov**, with **tox as a Travis frontend**, **PyUp to automatically manage dependencies and their security**, and **Coveralls to track code coverage**. Of course, if the package doesn't adhere to PEP8 then **black** will prevent the Travis build from passing.<br/>Now let's get writing a hit Python package ;)
  
  The Travis build config in ```.travis.yml``` sets up and configures a python venv(s) and runs pytest to execute tests found in ```./tests``` against the substring module provided in the find_substrings package located at ```./src/find_substrings```
  
