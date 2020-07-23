@@ -11,8 +11,8 @@ install:
                              #- pip install -r requirements.txt #this would be covered by setup.py
   
 script:
-  - black --check src/
-  - black --check tests/
+  - black src/
+  - black tests/
   - pytest --cov=src -v -rs 
   
 after_success:
