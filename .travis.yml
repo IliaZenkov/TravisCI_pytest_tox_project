@@ -6,10 +6,11 @@ python:
 #  - '3.6'
 
 install:
+  #- pip install -e .
   - pip install -r requirements.txt
-  - python setup.py install #could also have Travis install our package like this: pip install -e .
+  - python setup.py install 
   
 script:
   - black --check src/
   - black --check tests/
-  - pytest -v -rs
+  - pytest -v -rs --cov=src
