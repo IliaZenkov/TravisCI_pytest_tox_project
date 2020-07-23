@@ -8,7 +8,7 @@
 
 
 # Travis+pytest+pytest-cov+PyUp: find_substrings
- A project I made to get familiar with **Travis CI** running **pytest and pytest-cov**, with **tox as a Travis frontend**, **PyUp to automatically manage dependencies and their security**, and **Coveralls to track code coverage**. Of course, if the package doesn't adhere to PEP8 then **black** will prevent the Travis build from passing. Now let's get writing a hit Python package ;)
+ A project I made to get familiar with **Travis CI** running **pytest and pytest-cov**, with **tox as a Travis frontend**, **PyUp to automatically manage dependencies and their security**, and **Coveralls to track code coverage**. Of course, if the package doesn't adhere to PEP8 then **black** will prevent the Travis build from passing. \nNow let's get writing a hit Python package ;)
  
  The Travis build config in ```.travis.yml``` sets up and configures a python venv(s) and runs pytest to execute tests found in ```./tests``` against the substring module provided in the find_substrings package located at ```./src/find_substrings```
  
