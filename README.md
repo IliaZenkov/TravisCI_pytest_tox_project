@@ -16,7 +16,7 @@ Next, we use [twine](https://pypi.org/project/twine/) to automatically upload th
 
 Alternatively, a ```requirements.txt``` file is included so users can manually install dependencies using ```pip install -r requirements.txt``` - For a one-click solution not relying on the package's ```setup.py```, users can run a shell script command such as  ```virtualenv .env && source .env/bin/activate && pip install -r requirements.txt```
 
-#ToDo:
+#ToDo:  
 -Use [pre-commit](https://pre-commit.com/) to automatically run pre-configured hooks on commits before merging e.g. to automatically format with Black.
--Actually configure tox
+
 
