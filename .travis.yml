@@ -6,8 +6,9 @@ python:
 #  - '3.6'
 
 install:
+  - pip install -r requirements_dev.txt #dependencies for pytest, code coverage, and formatting
   - python setup.py install  #instead of the usual - pip install -e . (which tells Travis to install my package as a wheel)
-                             #- pip install -r requirements.txt #this should already be covered by setup.py
+                             #- pip install -r requirements.txt #this would be covered by setup.py
   
 script:
   - black --check src/
