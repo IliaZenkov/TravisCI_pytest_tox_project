@@ -13,4 +13,4 @@ install:
 script:
   - black --check src/
   - black --check tests/
-  - pytest -v -rs --cov=src
+  - pytest --cov=src -v -rs 
