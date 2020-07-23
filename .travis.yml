@@ -9,4 +9,6 @@ install:
   - python setup.py install
   
 script:
+  - black --check src/
+  - black --check tests/
   - pytest -v -rs
