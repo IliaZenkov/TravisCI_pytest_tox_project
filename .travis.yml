@@ -6,8 +6,8 @@ python:
 #  - '3.6'
 
 install:
-  - pip install -r requirements.txt
   - python setup.py install  #instead of the usual - pip install -e . (which tells Travis to install my package as a wheel)
+                             #- pip install -r requirements.txt #this should already be covered by setup.py
   
 script:
   - black --check src/
