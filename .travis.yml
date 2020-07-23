@@ -14,3 +14,6 @@ script:
   - black --check src/
   - black --check tests/
   - pytest --cov=src -v -rs 
+  
+after_success:
+  — coveralls
