@@ -6,9 +6,8 @@ python:
 #  - '3.6'
 
 install:
-  - pip install -e .
   - pip install -r requirements.txt
-  - python setup.py install
+  - python setup.py install #could also have Travis install our package like this: pip install -e .
   
 script:
   - black --check src/
