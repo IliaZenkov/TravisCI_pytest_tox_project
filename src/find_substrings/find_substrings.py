@@ -32,4 +32,6 @@ class print_substring:
             print(f"There are {substrings.count} substrings in '{substrings.string}'")
             print(f"Substrings of '{substrings.string}': {substrings.list}")
         else:
-            print(f"There are 10 or less substrings in '{substrings.string}', we don't need to know what they are.")
+            print(
+                f"There are 10 or less substrings in '{substrings.string}', we don't need to know what they are."
+            )
