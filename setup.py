@@ -3,17 +3,6 @@
 from glob import glob
 from setuptools import find_packages, setup, Command
 
-setup(name='find_substrings',
-      version='1.0',
-      description='Script to find all substrings of given input string',
-      author='Ilia Zenkov',
-      packages=find_packages('src'),
-      package_dir={'': 'src'},
-      py_modules=[splitext(basename(path))[0] for path in glob('src/*.py')],
-     )
-
-install_requires=['']
-
 class testcov(Command):
     description = "runs pytest and sends report through codeclimate"
     user_options = []
@@ -30,4 +19,15 @@ class testcov(Command):
             call(["python -m codeclimate_test_reporter --file .coverage"], shell=True)
         raise SystemExit(errno)
 
-cmdclass={'testcov': testcov}
+setup(name='find_substrings',
+      version='1.0',
+      description='Script to find all substrings of given input string',
+      author='Ilia Zenkov',
+      packages=find_packages('src'),
+      package_dir={'': 'src'},
+      py_modules=[splitext(basename(path))[0] for path in glob('src/*.py')],
+      cmdclass={'testcov': testcov}
+     )
+
+install_requires=['']
+
