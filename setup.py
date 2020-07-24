@@ -2,6 +2,7 @@
 
 from glob import glob
 from setuptools import find_packages, setup, Command
+from subprocess import call
 
 class testcov(Command):
     description = "runs pytest and sends report through codeclimate"
