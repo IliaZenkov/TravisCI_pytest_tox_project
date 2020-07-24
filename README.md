@@ -22,6 +22,6 @@ Alternatively, a ```requirements.txt``` file is included so users can manually i
 
 # ToDo:  
 - Add documentation with [**Sphinx**](https://www.sphinx-doc.org/en/master/)
-- Use **[pre-commit]**(https://pre-commit.com/) to automatically run pre-configured hooks on commits before merging e.g. to automatically format with Black.
+- Use [**pre-commit**](https://pre-commit.com/) to automatically run pre-configured hooks on commits before merging e.g. to automatically format with Black.
 
 
