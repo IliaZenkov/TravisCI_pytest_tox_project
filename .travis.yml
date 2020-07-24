@@ -22,9 +22,9 @@ matrix:
 install:
   - pip install -U pip
   - pip install tox-travis
-  - pip install -r requirements-dev.txt #dependencies for pytest, code coverage, and formatting
-#  - python setup.py install  #instead of the usual - pip install -e . (which tells Travis to install my package as a wheel)
-                             #- pip install -r requirements.txt #this is covered by setup.py
+#  - pip install -r requirements-dev.txt --> dependencies for pytest, code coverage, and formatting --> already being handled by tox
+#  - python setup.py install  --> we use setup.py instead of the usual - pip install -e . (which tells Travis to install my package as a wheel)
+#  - pip install -r requirements.txt --> this is covered by setup.py
   
 script:
   - tox
