@@ -31,9 +31,9 @@ install:
 #  - pip install -r requirements.txt --> this is covered by setup.py (which is handled by tox)
 
 before_script:
-  - if [ "$TRAVIS_OS_NAME" == "linux" ]; then curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter; fi
-  - if [ "$TRAVIS_OS_NAME" == "linux" ]; then chmod +x ./cc-test-reporter; fi
-  - if [ "$TRAVIS_OS_NAME" == "linux" ]; then ./cc-test-reporter before-build; fi
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - then chmod +x ./cc-test-reporter
+  - then ./cc-test-reporter before-build
 
 script:
   - tox
