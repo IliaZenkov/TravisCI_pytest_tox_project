@@ -8,6 +8,10 @@ python:
   - "3.6"
   - "nightly"
   - "pypy3"
+  
+env:
+  global:
+    - CC_TEST_REPORTER_ID=
 
 jobs:
   include:
@@ -23,10 +27,6 @@ jobs:
         - python -m pip install --upgrade pip
       env: PATH=/c/Python38:/c/Python38/Scripts:$PATH
 
-env:
-  global:
-    - CC_TEST_REPORTER_ID=03050e0233c8e6d6cb96d735662b1c68de112264a2d7a33870d130b38a936454
-    
 install:
   - pip install -U pip
   - pip install tox-travis
