@@ -32,14 +32,13 @@ install:
 
 before_script:
   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
-  - then chmod +x ./cc-test-reporter
-  - then ./cc-test-reporter before-build
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
 
 script:
   - tox
   
 after_script:
-  - if [ $TRAVIS_OS_NAME == "linux" ]; then coverage xml; fi
   - if [ "$TRAVIS_OS_NAME" == "linux" ]; then ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT; fi
   
 after_success:
