@@ -13,3 +13,21 @@ setup(name='find_substrings',
      )
 
 install_requires=['']
+
+class testcov(Command):
+    description = "runs pytest and sends report through codeclimate"
+    user_options = []
+
+    def initialize_options(self):
+        pass
+
+    def finalize_options(self):
+        pass
+
+    def run(self):
+        errno = call(["pytest --cov=src --durations=10 tests"], shell=True)
+        if os.getenv("TRAVIS_PULL_REQUEST") == "false":
+            call(["python -m codeclimate_test_reporter --file .coverage"], shell=True)
+        raise SystemExit(errno)
+
+cmdclass={'testcov': PyTestCov},
