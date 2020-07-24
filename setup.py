@@ -16,9 +16,9 @@ class testcov(Command):
         pass
 
     def run(self):
-        errno = call(["python -m pytest --cov=src --durations=10 tests"], shell=True)
+        errno = call(["pytest --cov=src --durations=10 tests"], shell=True)
         if os.getenv("TRAVIS_PULL_REQUEST") == "false":
-            call(["python -m coverage run -m pytest"], shell=True)
+            call(["coverage run -m pytest"], shell=True)
         raise SystemExit(errno)
 
 setup(name='find_substrings',
