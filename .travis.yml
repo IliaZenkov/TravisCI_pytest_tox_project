@@ -1,7 +1,7 @@
 OS: 
   - linux
-  - windows
   - OSX
+  #- windows #not yet supported by Travis for Python
   
 dist: 
   - xenial
