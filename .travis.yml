@@ -1,16 +1,28 @@
-dist: xenial
+OS: 
+  - linux
+  - windows
+  - OSX
+  
+dist: 
+  - xenial
+
 language: python
 
 python:
+  - '3.3'
   - '3.8'
-#  - '3.6'
+  - 'pypy3.6'
+  - 'nightly'
 
 install:
+  - pip install -U pip
+  - pip install tox-travis
   - pip install -r requirements_dev.txt #dependencies for pytest, code coverage, and formatting
   - python setup.py install  #instead of the usual - pip install -e . (which tells Travis to install my package as a wheel)
-                             #- pip install -r requirements.txt #this would be covered by setup.py
+                             #- pip install -r requirements.txt #this is covered by setup.py
   
 script:
+  - tox
   - black --check src/
   - black --check tests/
   - pytest --cov=src -v -rs 
