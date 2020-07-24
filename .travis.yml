@@ -29,9 +29,17 @@ install:
 #  - pip install -r requirements-dev.txt --> Handled by tox. Dependencies for pytest, code coverage, and formatting
 #  - python setup.py install  --> Handled by tox. We use setup.py instead of the usual - pip install -e . (which tells Travis to install my package as a wheel)
 #  - pip install -r requirements.txt --> this is covered by setup.py (which is handled by tox)
-  
+
+before_script:
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
+
 script:
   - tox
+  
+after_script:
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
   
 after_success:
   — coveralls
