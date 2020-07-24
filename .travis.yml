@@ -40,7 +40,11 @@ script:
   - tox
   
 after_script:
-  - if [ "$TRAVIS_OS_NAME" == "linux" ]; then ./cc-test-reporter after-build -t coverage.py --exit-code $TRAVIS_TEST_RESULT; fi
+  - if [ "$TRAVIS_OS_NAME" == "linux" ]; then COVERAGE_SOURCE_PATH=src/main/java ./cc-test-reporter \
+  format-coverage target/site/coverage/coverage.xml     \
+  --input-type coverage.py
+  - if [ "$TRAVIS_OS_NAME" == "linux" ]; then./cc-test-reporter upload-coverage; fi
+                                              #./cc-test-reporter after-build -t coverage.py --exit-code $TRAVIS_TEST_RESULT; fi
   
 after_success:
   — coveralls
