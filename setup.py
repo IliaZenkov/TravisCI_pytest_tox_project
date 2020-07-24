@@ -18,7 +18,6 @@ class testcov(Command):
     def run(self):
         errno = call(["pytest --cov=src --durations=10 tests"], shell=True)
         if os.getenv("TRAVIS_PULL_REQUEST") == "false":
-            print("invoking coverage")
             call(["coverage run -m pytest"], shell=True)
         raise SystemExit(errno)
 
