@@ -1,7 +1,7 @@
 OS: 
   - linux
   - OSX
-  #- windows #not yet supported by Travis for Python
+# - windows --> not yet supported by Travis for Python
   
 dist: 
   - xenial
@@ -15,7 +15,7 @@ python:
   
 matrix:
   include:
-    - python: 3.3 #Travis doesn't include a Py3.3 dist for xenial on Ubuntu
+    - python: 3.3 #Travis doesn't include a Py33 dist for xenial on Ubuntu
       dist: trusty
 
 
