@@ -30,4 +30,4 @@ class testcov(Command):
             call(["python -m codeclimate_test_reporter --file .coverage"], shell=True)
         raise SystemExit(errno)
 
-cmdclass={'testcov': PyTestCov},
+cmdclass={'testcov': testcov},
