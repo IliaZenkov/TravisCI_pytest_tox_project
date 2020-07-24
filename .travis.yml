@@ -31,15 +31,16 @@ install:
 #  - pip install -r requirements.txt --> this is covered by setup.py (which is handled by tox)
 
 before_script:
-  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
-  - chmod +x ./cc-test-reporter
-  - ./cc-test-reporter before-build
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter;
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then chmod +x ./cc-test-reporter;
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then then ./cc-test-reporter before-build;
 
 script:
   - tox
   
 after_script:
-  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
+  - if [[ $TRAVIS_OS_NAME == "linux" ]]; then coverage xml;
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT;
   
 after_success:
   — coveralls
