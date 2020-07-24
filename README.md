@@ -1,5 +1,6 @@
 [![Build status](https://travis-ci.org/IliaZenkov/TravisCI_pytest_tox_project.svg?branch=master)](https://travis-ci.org/github/IliaZenkov/TravisCI_pytest_tox_project)
 [![Coverage Status](https://coveralls.io/repos/github/IliaZenkov/TravisCI_pytest_tox_project/badge.svg?branch=master)](https://coveralls.io/github/IliaZenkov/TravisCI_pytest_tox_project?branch=master)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/b1345430b01dfb5ca59d/test_coverage)](https://codeclimate.com/github/IliaZenkov/TravisCI_pytest_tox_project/test_coverage)
 [![Maintainability](https://api.codeclimate.com/v1/badges/b1345430b01dfb5ca59d/maintainability)](https://codeclimate.com/github/IliaZenkov/TravisCI_pytest_tox_project/maintainability)
 [![Dependencies](https://pyup.io/repos/github/IliaZenkov/TravisCI_pytest_tox_project/shield.svg)](https://pyup.io/repos/github/IliaZenkov/TravisCI_pytest_tox_project/)
 [![Python 3](https://pyup.io/repos/github/IliaZenkov/TravisCI_pytest_tox_project/python-3-shield.svg)](https://pyup.io/repos/github/IliaZenkov/TravisCI_pytest_tox_project/)
