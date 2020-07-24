@@ -1,12 +1,23 @@
-OS: 
-  - linux
-  - OSX
-# - windows --> not yet supported by Travis for Python
-  
-dist: 
-  - xenial
-
 language: python
+
+jobs:
+  include:
+    - name: "Python 3.8.0 on Xenial Linux"
+      python: 
+        - 3.8
+        - pypy3
+        - nightly
+    - name: "Python 3.7.4 on macOS"
+      os: osx
+      osx_image: xcode11.2  # Python 3.7.4 running on macOS 10.14.4
+      language: shell       # install Python through shell since 'language: python' is an error on Travis CI macOS
+    - name: "Python 3.8.0 on Windows"
+      os: windows           # Windows 10.0.17134 N/A Build 17134
+      language: shell       # manually installing Python since 'language: python' is an error on Travis CI Windows
+      before_install:
+        - choco install python --version 3.8.0
+        - python -m pip install --upgrade pip
+      env: PATH=/c/Python38:/c/Python38/Scripts:$PATH
 
 python:
   - '3.8'
