@@ -13,5 +13,5 @@ engines:
 
 ratings:
   paths:
-  - "src/**.py"
+  - "src/find_substrings/**.py"
   - "tests/**.py"
