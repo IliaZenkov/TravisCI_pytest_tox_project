@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 from glob import glob
-from setuptools import find_packages, setup
+from setuptools import find_packages, setup, command
 
 setup(name='find_substrings',
       version='1.0',
