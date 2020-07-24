@@ -14,7 +14,7 @@ This here is an example project I constructed from scratch (as opposed to using 
 Now let's get writing a hit Python package ;)
 
 # Selected Notes 
-The Travis build config in ```.travis.yml``` sets up and configures a python venv(s) and runs pytest to execute tests found in ```./tests``` against the substring module provided in the find_substrings package located at ```./src/find_substrings```
+The Travis build config in ```.travis.yml``` is just a wrapper around ```tox.ini``` - tox sets up the python venvs and runs pytest to execute tests found in ```./tests``` against the substring module provided in the find_substrings package located at ```./src/find_substrings```. Tox also covers all other aspects of the python environment config. 
  
 Next, we use [twine](https://pypi.org/project/twine/) to automatically upload the find_substrings package to PyPI, after which anyone can install it by running ```pip install find_substrings``` to install all python modules in ```./src``` and their dependencies as configured in ```setup.py```
 
