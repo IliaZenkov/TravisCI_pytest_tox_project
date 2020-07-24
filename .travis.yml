@@ -19,16 +19,6 @@ jobs:
         - python -m pip install --upgrade pip
       env: PATH=/c/Python38:/c/Python38/Scripts:$PATH
 
-python:
-  - '3.8'
-  - 'pypy3'
-  - 'nightly'
-  
-matrix:
-  include:
-    - python: 3.3 #Travis doesn't include a Py33 dist for xenial on Ubuntu
-      dist: trusty
-
 
 install:
   - pip install -U pip
@@ -39,9 +29,6 @@ install:
   
 script:
   - tox
- # - black --check src/
-#  - black --check tests/
- # - pytest --cov=src -v -rs 
   
 after_success:
   — coveralls
