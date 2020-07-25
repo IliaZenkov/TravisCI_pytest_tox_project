@@ -9,9 +9,9 @@ python:
   - "nightly"
   - "pypy3"
   
-env:
-  global:
-    - CC_TEST_REPORTER_ID="Code Climate Reporter ID"
+#nv:
+#  global:
+#    - CC_TEST_REPORTER_ID="Code Climate Reporter ID"
 
 jobs:
   include:
