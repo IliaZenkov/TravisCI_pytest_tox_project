@@ -34,16 +34,16 @@ install:
 #  - python setup.py install  --> Handled by tox. We use setup.py instead of the usual - pip install -e . (which tells Travis to install my package as a wheel)
 #  - pip install -r requirements.txt --> this is covered by setup.py (which is handled by tox)
 
-#before_script:
-#  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
-#  - chmod +x ./cc-test-reporter
-#  - if [ "$TRAVIS_OS_NAME" == "linux" ]; then ./cc-test-reporter before-build; fi
+before_script:
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - if [ "$TRAVIS_OS_NAME" == "linux" ]; then ./cc-test-reporter before-build; fi
 
 script:
   - tox
   
-#after_script:
-#  - if [ "$TRAVIS_OS_NAME" == "linux" ]; then ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT; fi
+after_script:
+  - if [ "$TRAVIS_OS_NAME" == "linux" ]; then ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT; fi
   
 after_success:
   — coveralls
