@@ -23,7 +23,7 @@ def test_hello():
     ]
     assert substrings.count == 15
 
-    
+
 def test_test():
     string = "test"
     substrings = substring(string)
@@ -41,7 +41,7 @@ def test_test():
     ]
     assert substrings.count == 10
 
-    
+
 def test_substring_print(capsys):
     string = "test"
     substring(string)
