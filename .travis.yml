@@ -4,7 +4,7 @@ dist: xenial
 
 language: python
 
-# Travis will create a new build job for each version of Python
+# Travis will create a new build job on linux for each version of Python specified below
 python: 
   - "3.8"
   - "3.6"
