@@ -1,20 +1,22 @@
+# Default OS and distribution to use for Travis builds unless specified in the 'jobs:' section
 OS: linux
 dist: xenial
 
 language: python
 
-#python: 
-#  - "3.8"
-#  - "3.6"
-#  - "nightly"
-#  - "pypy3"
+# Travis will create a new build job for each version of Python
+python: 
+  - "3.8"
+  - "3.6"
+  - "nightly"
+  - "pypy3"
   
-
+# Travis will also create one build job for OSX and one for Windows with the Travis-supported Python on each OS
 jobs:
   include:
     - name: "Python 3.7.7 on macOS"
       os: osx
-      osx_image: xcode11.2  # Python 3.7.4 running on macOS 10.14.4
+      osx_image: xcode11.2  # Python 3.7.7 running on macOS 10.14.4
       language: shell       # install Python through shell since 'language: python' is an error on Travis CI macOS
     - name: "Python 3.8.0 on Windows"
       os: windows           # Windows 10.0.17134 N/A Build 17134
@@ -24,8 +26,7 @@ jobs:
         - python -m pip install --upgrade pip
       env: PATH=/c/Python38:/c/Python38/Scripts:$PATH
       
-
-
+# Update pip and install tox
 install:
   - pip install -U pip
   - pip install tox-travis
@@ -33,16 +34,21 @@ install:
 #  - python setup.py install  --> Handled by tox. We use setup.py instead of the usual - pip install -e . (which tells Travis to install my package as a wheel)
 #  - pip install -r requirements.txt --> this is covered by setup.py (which is handled by tox)
 
+# Fetch test reporter for CodeClimate and set it to be executable; then inform CodeClimate (the test reporter) of a pending build
+# Set to only run on linux w/ python 3.8 which is the main build job for this project
 before_script:
   - if [ "$TRAVIS_OS_NAME" == "linux" ] && [ "$TRAVIS_PYTHON_VERSION" == "3.8" ]; then curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter; fi
   - if [ "$TRAVIS_OS_NAME" == "linux" ] && [ "$TRAVIS_PYTHON_VERSION" == "3.8" ]; then chmod +x ./cc-test-reporter; fi
   - if [ "$TRAVIS_OS_NAME" == "linux" ] && [ "$TRAVIS_PYTHON_VERSION" == "3.8" ]; then ./cc-test-reporter before-build; fi
 
+# The meat: run tox which will configure our environments to my specs in tox.ini
 script:
   - tox
-  
+
+# Upload the build's test results to CodeClimate via the test reporter (on the main job, which is linux running Py3.8)
 after_script:
   - if [ "$TRAVIS_OS_NAME" == "linux" ] && [ "$TRAVIS_PYTHON_VERSION" == "3.8" ]; then ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT; fi
-  
+
+# Only runs after a successful build (exit code==0)
 after_success:
 
