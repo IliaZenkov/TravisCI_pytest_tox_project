@@ -5,6 +5,7 @@ def test_hello():
     string = "hello"
     substrings = substring(string)
     assert substrings.list == [
+        
         "h",
         "he",
         "hel",
