@@ -29,7 +29,7 @@ jobs:
 # Update pip and install tox
 install:
   - pip install -U pip
-  - pip install tox-travis
+  - pip install tox
 #  - pip install -r requirements-dev.txt --> Handled by tox. Dependencies for pytest, code coverage, and formatting
 #  - python setup.py install  --> Handled by tox. We use setup.py instead of the usual - pip install -e . (which tells Travis to install my package as a wheel)
 #  - pip install -r requirements.txt --> this is covered by setup.py (which is handled by tox)
