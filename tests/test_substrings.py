@@ -4,7 +4,7 @@ from src.find_substrings.find_substrings import substring
 def test_hello():
     string = "hello"
     substrings = substring(string)
-    assert substrings.list == [ 
+    assert substrings.list == [
         "h",
         "he",
         "hel",
