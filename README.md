@@ -1,10 +1,9 @@
-[![Build status](https://travis-ci.org/IliaZenkov/TravisCI_pytest_tox_project.svg?branch=master)](https://travis-ci.org/github/IliaZenkov/TravisCI_pytest_tox_project)
-[![Coveralls](https://coveralls.io/repos/github/IliaZenkov/TravisCI_pytest_tox_project/badge.svg?branch=HEAD&service=github)](https://coveralls.io/github/IliaZenkov/TravisCI_pytest_tox_project?branch=HEAD)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/b1345430b01dfb5ca59d/test_coverage)](https://codeclimate.com/github/IliaZenkov/TravisCI_pytest_tox_project/test_coverage)
-[![Maintainability](https://api.codeclimate.com/v1/badges/b1345430b01dfb5ca59d/maintainability)](https://codeclimate.com/github/IliaZenkov/TravisCI_pytest_tox_project/maintainability)
-[![Dependencies](https://pyup.io/repos/github/IliaZenkov/TravisCI_pytest_tox_project/shield.svg)](https://pyup.io/repos/github/IliaZenkov/TravisCI_pytest_tox_project/)
-[![Python 3](https://pyup.io/repos/github/IliaZenkov/TravisCI_pytest_tox_project/python-3-shield.svg)](https://pyup.io/repos/github/IliaZenkov/TravisCI_pytest_tox_project/)
-
+[![Build status](https://travis-ci.org/IliaZenkov/python-package-continuous-integration.svg?branch=master)](https://travis-ci.org/github/IliaZenkov/python-package-continuous-integration)
+[![Coveralls](https://coveralls.io/repos/github/IliaZenkov/python-package-continuous-integration/badge.svg?branch=HEAD&service=github)](https://coveralls.io/github/IliaZenkov/python-package-continuous-integration?branch=HEAD)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/b1345430b01dfb5ca59d/test_coverage)](https://codeclimate.com/github/IliaZenkov/python-package-continuous-integration/test_coverage)
+[![Maintainability](https://api.codeclimate.com/v1/badges/b1345430b01dfb5ca59d/maintainability)](https://codeclimate.com/github/IliaZenkov/python-package-continuous-integration/maintainability)
+[![Dependencies](https://pyup.io/repos/github/IliaZenkov/python-package-continuous-integration/shield.svg)](https://pyup.io/repos/github/IliaZenkov/python-package-continuous-integration/)
+[![Python 3](https://pyup.io/repos/github/IliaZenkov/python-package-continuous-integration/python-3-shield.svg)](https://pyup.io/repos/github/IliaZenkov/python-package-continuous-integration/)
 
 
 
